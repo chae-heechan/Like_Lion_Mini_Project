@@ -1,0 +1,15 @@
+#header{
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    background-color: red;
+    display: flex;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: center;
+}

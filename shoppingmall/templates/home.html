@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}{% static 'css/home.css' %}{% endblock %}
+{% block title %}HOME{% endblock %}
+{% block contents %}
+    <div id="main">
+        {% for product in page %}
+        <a href="{% url 'detail' product.id %}">
+            <div class="product-card">
+                <img src="{{ product.product_profile.url }}" width="300" alt="사진">
+                <p class="product-title">{{ product.product_name }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}
